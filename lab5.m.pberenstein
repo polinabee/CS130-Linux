@@ -1,0 +1,1064 @@
+POLINA BERENSTEIN
+LAB #5
+LINUX
+
+############### PROBLEM 1 ##########################
+
+Script started on Mon 25 Apr 2016 06:49:03 PM PDT
+pberenstein@cs130:~$ umask
+0022
+pberenstein@cs130:~$ umask 0062
+pberenstein@cs130:~$ umask
+0062
+pberenstein@cs130:~$ mkdir testdir
+pberenstein@cs130:~$ touch testfile
+in@cs130:~$ ls -l
+total 100
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 10Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 10Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 11Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 11Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 12Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 12Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 13Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 13Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 14Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 14Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 15Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 15Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 16Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 16Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 17Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 17Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 18Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 18Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 19Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 19Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 1Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 1Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 20Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 20Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 21Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 21Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 22Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 22Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 23Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 23Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 24Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 24Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 25Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 25Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 26Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 26Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 27Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 27Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 28Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 28Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 29Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 29Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 2Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 2Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 3Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 3Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 4Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 4Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 5Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 5Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 6Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 6Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 7Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 7Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 8Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 8Apr17
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 9Apr16
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 20:10 9Apr17
+-rw-r--r-- 1 pberenstein domain^users   60 Apr 14 19:55 allTeedOff
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 18:50 c_800erg98
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 18:50 c_8erg98
+drwx------ 2 pberenstein domain^users 4096 Apr  4 20:37 [0m[01;34mcdest[0m/
+-rw-r--r-- 1 pberenstein domain^users  258 Mar  7 20:20 controlChars
+drwx------ 2 pberenstein domain^users 4096 Mar 21 19:16 [01;34mcsource[0m/
+drwx------ 3 pberenstein domain^users 4096 Mar 10 20:16 [01;34md11[0m/
+-rw-r--r-- 1 pberenstein domain^users   60 Apr 14 19:55 decoded
+-rw-r--r-- 1 pberenstein domain^users    8 Apr 18 18:09 echo
+-rw-r--r-- 1 pberenstein domain^users   60 Apr 14 19:55 encoded
+-rw-r--r-- 1 pberenstein domain^users   63 Apr 14 19:55 error
+-rw-r--r-- 1 pberenstein domain^users   25 Feb  8 20:42 file1
+-rw-r--r-- 1 pberenstein domain^users   25 Feb  8 20:12 first
+-rw-r--r-- 1 pberenstein domain^users   60 Apr 14 19:55 good
+drwx------ 2 pberenstein domain^users 4096 Apr 24 23:07 [01;34mgraded[0m/
+-rw-r--r-- 1 pberenstein domain^users   60 Mar 21 20:28 grep
+-rw-r--r-- 2 pberenstein domain^users  165 Apr 18 20:10 hexy
+drwx------ 2 pberenstein domain^users 4096 Feb 22 19:58 [01;34mlab1[0m/
+drwx------ 2 pberenstein domain^users 4096 Mar  7 17:50 [01;34mlab2[0m/
+drwx------ 2 pberenstein domain^users 4096 Apr  4 21:08 [01;34mlab3[0m/
+drwx------ 2 pberenstein domain^users 4096 Apr 18 20:34 [01;34mlab4[0m/
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 25 18:49 lab5
+-rwxr-xr-x 1 pberenstein domain^users 1401 Feb  8 19:55 [01;31mlab.template[0m*
+-rw-r--r-- 1 pberenstein domain^users    0 Apr  4 20:09 ls
+-rw-r--r-- 1 pberenstein domain^users  254 Mar 10 19:40 me
+-rw-r--r-- 2 pberenstein domain^users  165 Apr 18 20:10 pberensteinHard
+lrwxrwxrwx 1 pberenstein domain^users   31 Apr 11 19:26 [01;35mpberensteinSoft[0m -> /home/students/pberenstein/hexy
+-rw-r--r-- 1 pberenstein domain^users   60 Apr  4 20:07 small
+drwx--xr-x 2 pberenstein domain^users 4096 Apr 25 19:24 [01;34mtestdir[0m/
+-rw----r-- 1 pberenstein domain^users    0 Apr 25 19:25 testfile
+drwx------ 2 pberenstein domain^users 4096 Apr 14 21:01 [01;34mturnin[0m/
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 18:29 x-44blade
+-rw-r--r-- 1 pberenstein domain^users    0 Apr 18 18:30 x-4blade75
+pberenstein@cs130:~$ umask 022
+pberenstein@cs130:~$ umask
+0022
+
+
+
+
+
+############# PROBLEM 2 ##############################
+
+pberenstein@cs130:~$ cat w x y z
+test file w
+test file x
+test file y
+test file z
+
+pberenstein@cs130:~$ cp w x y z
+cp: target `z' is not a directory
+
+pberenstein@cs130:~$ rm z
+pberenstein@cs130:~$ mkdir z
+
+pberenstein@cs130:~$ cat w x y z
+test file w
+test file x
+test file y
+cat: z: Is a directory
+
+pberenstein@cs130:~$ cp w x y z
+
+
+
+
+
+
+############## PROBLEM 3 ###############################
+
+pberenstein@cs130:~$ currentdir=`pwd`
+pberenstein@cs130:~$ w[Kecho $currentdir
+/home/students/pberenstein
+pberenstein@cs130:~$ echo "The current directory is $currend[Ktdir"
+The current directory is /home/students/pberenstein
+
+
+
+
+
+############ PROBLEM 4 ################################
+
+pberenstein@cs130:~$ top -d 100
+[H[2J(B[mtop - 19:53:56 up 237 days,  9:58, 20 users,  load average: 0.04, 0.01, 0.00(B[m[39;49m[K
+Tasks:(B[m[39;49m(B[m 151 (B[m[39;49mtotal,(B[m[39;49m(B[m   1 (B[m[39;49mrunning,(B[m[39;49m(B[m 150 (B[m[39;49msleeping,(B[m[39;49m(B[m   0 (B[m[39;49mstopped,(B[m[39;49m(B[m   0 (B[m[39;49mzombie(B[m[39;49m[K
+Cpu(s):(B[m[39;49m(B[m  0.1%(B[m[39;49mus,(B[m[39;49m(B[m  0.0%(B[m[39;49msy,(B[m[39;49m(B[m  0.0%(B[m[39;49mni,(B[m[39;49m(B[m 99.9%(B[m[39;49mid,(B[m[39;49m(B[m  0.0%(B[m[39;49mwa,(B[m[39;49m(B[m  0.0%(B[m[39;49mhi,(B[m[39;49m(B[m  0.0%(B[m[39;49msi,(B[m[39;49m(B[m  0.0%(B[m[39;49mst(B[m[39;49m[K
+Mem: (B[m[39;49m(B[m  3115140k (B[m[39;49mtotal,(B[m[39;49m(B[m   857408k (B[m[39;49mused,(B[m[39;49m(B[m  2257732k (B[m[39;49mfree,(B[m[39;49m(B[m   251104k (B[m[39;49mbuffers(B[m[39;49m[K
+Swap:(B[m[39;49m(B[m   946168k (B[m[39;49mtotal,(B[m[39;49m(B[m    16480k (B[m[39;49mused,(B[m[39;49m(B[m   929688k (B[m[39;49mfree,(B[m[39;49m(B[m   216192k (B[m[39;49mcached(B[m[39;49m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                                         (B[m[39;49m[K
+(B[m    1 root      20   0  2036  232  200 S  0.0  0.0   1:40.48 init                                                                                            (B[m[39;49m
+(B[m    2 root      20   0     0    0    0 S  0.0  0.0   0:00.52 kthreadd                                                                                        (B[m[39;49m
+(B[m    3 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0                                                                                     (B[m[39;49m
+(B[m    4 root      20   0     0    0    0 S  0.0  0.0   0:02.48 ksoftirqd/0                                                                                     (B[m[39;49m
+(B[m    5 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 watchdog/0                                                                                      (B[m[39;49m
+(B[m    6 root      20   0     0    0    0 S  0.0  0.0   2:00.29 events/0                                                                                        (B[m[39;49m
+(B[m    7 root      20   0     0    0    0 S  0.0  0.0   0:00.00 cpuset                                                                                          (B[m[39;49m
+(B[m    8 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khelper                                                                                         (B[m[39;49m
+(B[m    9 root      20   0     0    0    0 S  0.0  0.0   0:00.00 netns                                                                                           (B[m[39;49m
+(B[m   10 root      20   0     0    0    0 S  0.0  0.0   0:00.00 async/mgr                                                                                       (B[m[39;49m
+(B[m   11 root      20   0     0    0    0 S  0.0  0.0   0:00.00 pm                                                                                              (B[m[39;49m
+(B[m   12 root      20   0     0    0    0 S  0.0  0.0   0:15.32 sync_supers                                                                                     (B[m[39;49m
+(B[m   13 root      20   0     0    0    0 S  0.0  0.0   0:15.63 bdi-default                                                                                     (B[m[39;49m
+(B[m   14 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kintegrityd/0                                                                                   (B[m[39;49m
+(B[m   15 root      20   0     0    0    0 S  0.0  0.0   0:00.41 kblockd/0                                                                                       (B[m[39;49m
+(B[m   16 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kacpid                                                                                          (B[m[39;49m
+(B[m   17 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kacpi_notify                                                                                    (B[m[39;49m
+(B[m   18 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kacpi_hotplug                                                                                   (B[m[39;49m
+(B[m   19 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kseriod                                                                                         (B[m[39;49m
+(B[m   21 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kondemand/0                                                                                     (B[m[39;49m
+(B[m   22 root      20   0     0    0    0 S  0.0  0.0   0:04.32 khungtaskd                                                                                      (B[m[39;49m
+(B[m   23 root      20   0     0    0    0 S  0.0  0.0   0:00.50 kswapd0                                                                                         (B[m[39;49m
+(B[m   24 root      25   5     0    0    0 S  0.0  0.0   0:00.00 ksmd                                                                                            (B[m[39;49m
+(B[m   25 root      20   0     0    0    0 S  0.0  0.0   0:00.00 aio/0                                                                                           (B[m[39;49m
+(B[m   26 root      20   0     0    0    0 S  0.0  0.0   0:00.00 crypto/0                                                                                        (B[m[39;49m
+(B[m  208 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ksuspend_usbd                                                                                   (B[m[39;49m
+(B[m  209 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khubd                                                                                           (B[m[39;49m
+(B[m  210 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ata/0                                                                                           (B[m[39;49m
+(B[m  211 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ata_aux                                                                                         (B[m[39;49m
+(B[m  212 root      20   0     0    0    0 S  0.0  0.0   0:00.01 scsi_eh_0                                                                                       (B[m[39;49m
+(B[m  213 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_1                                                                                       (B[m[39;49m
+(B[m  218 root      20   0     0    0    0 S  0.0  0.0   2:03.39 mpt_poll_0                                                                                      (B[m[39;49m
+(B[m  219 root      20   0     0    0    0 S  0.0  0.0   0:00.00 mpt/0                                                                                           (B[m[39;49m
+(B[m  229 root      20   0     0    0    0 S  0.0  0.0   0:00.00 scsi_eh_2                                                                                       (B[m[39;49m
+(B[m  266 root      20   0     0    0    0 S  0.0  0.0   0:01.06 kjournald                                                                                       (B[m[39;49m
+(B[m  334 root      16  -4  2316  172  168 S  0.0  0.0   0:00.03 udevd                                                                                           (B[m[39;49m
+(B[m  447 root      18  -2  2260   92   88 S  0.0  0.0   0:00.00 udevd                                                                                           (B[m[39;49m
+(B[m  448 root      18  -2  2260  100   96 S  0.0  0.0   0:00.00 udevd                                                                                           (B[m[39;49m
+(B[m  517 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kpsmoused                                                                                       (B[m[39;49m
+(B[m  566 root      20   0     0    0    0 S  0.0  0.0   0:00.00 usbhid_resumer                                                                                  (B[m[39;49m
+(B[m  723 root      20   0  3860  272  268 S  0.0  0.0   0:00.04 login                                                                                           (B[m[39;49m
+(B[m  724 compscia  20   0  7816  320  316 S  0.0  0.0   0:00.24 bash                                                                                            (B[m[39;49m
+(B[m  737 root      20   0     0    0    0 S  0.0  0.0   0:07.94 kjournald                                                                                       (B[m[39;49m
+(B[m  738 root      20   0     0    0    0 S  0.0  0.0   0:03.04 kjournald                                                                                       (B[m[39;49m
+(B[m  739 root      20   0     0    0    0 S  0.0  0.0   0:00.57 kjournald                                                                                       (B[m[39;49m
+(B[m  740 root      20   0     0    0    0 S  0.0  0.0   0:59.69 kjournald                                                                                       (B[m[39;49m
+(B[m  751 root      20   0  5208  272  268 S  0.0  0.0   0:00.03 sudo                                                                                            (B[m[39;49m
+(B[m  752 root      20   0  5588  324  320 S  0.0  0.0   0:00.16 bash                                                                                            (B[m[39;49m
+(B[m  783 daemon    20   0  1812  368  288 S  0.0  0.0   0:00.00 portmap                                                                                         (B[m[39;49m
+(B[m  795 statd     20   0  1940  188  184 S  0.0  0.0   0:00.00 rpc.statd                                                                                       (B[m[39;49m
+(B[m  994 root      20   0  2336  564  448 S  0.0  0.0   0:07.52 dhclient                                                                                        (B[m[39;49m
+(B[m 1029 root      20   0 27584  872  600 S  0.0  0.0   0:14.69 rsyslogd                                                                                        (B[m[39;49m
+(B[m 1085 root      20   0 66200  232  228 S  0.0  0.0   0:00.01 lwsmd                                                                                           (B[m[39;49m
+(B[m 1093 root      20   0 92584 1444 1000 S  0.0  0.0   0:59.41 lwsmd                                                                                           (B[m[39;49m
+(B[m 1122 root      20   0 99852 1396 1052 S  0.0  0.0   0:12.15 lwsmd                                                                                           (B[m[39;49m
+(B[m 1138 daemon    20   0  2164  152  136 S  0.0  0.0   0:00.15 atd                                                                                             (B[m[39;49m
+(B[m 1151 root      20   0 91112 1528 1080 S  0.0  0.0   2:12.50 lwsmd                                                                                           (B[m[39;49m
+(B[m 1159 root      20   0  1708  180  176 S  0.0  0.0   0:00.00 acpid                                                                                           (B[m[39;49m
+(B[m 1180 root      20   0 92352 2960 2180 S  0.0  0.1   0:00.13 lwsmd                                                                                           (B[m[39;49m
+(B[m 1219 root      20   0  503m 242m 4248 S  0.0  8.0 119:18.91 lwsmd                                                                                           (B[m[39;49m
+(B[m 1234 root      20   0  3788  304  208 S  0.0  0.0   0:13.02 cron                                                                                            (B[m[39;49m
+(B[m 1307 root      20   0 91172  232  228 S  0.0  0.0   0:00.00 lwsmd                                                                                           (B[m[39;49m
+(B[m 1538 Debian-e  20   0  7528  308  248 S  0.0  0.0   0:02.68 exim4                                                                                           (B[m[39;49m
+(B[m 1598 root      20   0  2156  140  108 S  0.0  0.0   0:01.14 daemon                                                                                          (B[m[39;49m
+(B[m 1601 root      20   0  3160  588  248 S  0.0  0.0   0:25.20 mpt-statusd                                                                                     (B[m[39;49m
+(B[m 1661 root      20   0     0    0    0 S  0.0  0.0   2:27.62 vmmemctl                                                                                        (B[m[39;49m
+(B[m 1790 root      20   0  5500  428  324 S  0.0  0.0   0:01.18 sshd                                                                                            (B[m[39;49m
+(B[m 1854 root      20   0 24880 1344 1084 S  0.0  0.0 104:38.34 vmtoolsd                                                                                        (B[m[39;49m
+(B[m 1880 root      20   0  1712  188  184 S  0.0  0.0   0:00.00 getty                                                                                           (B[m[39;49m
+(B[m 1881 root      20   0  1712  188  184 S  0.0  0.0   0:00.00 getty                                                                                           (B[m[39;49m
+(B[m 1882 root      20   0  1712  188  184 S  0.0  0.0   0:00.00 getty                                                                                           (B[m[39;49m
+(B[m 1883 root      20   0  1712  188  184 S  0.0  0.0   0:00.00 getty                                                                                           (B[m[39;49m
+(B[m 1884 root      20   0  1712  188  184 S  0.0  0.0   0:00.00 getty                                                                                           (B[m[39;49m
+(B[m 4139 rmpickfo  20   0  3404  460  324 S  0.0  0.0   0:00.00 script                                                                                          (B[m[39;49m[6;1H[K[82;1H[?12l[?25h
+
+pberenstein@cs130:~$ du -a
+0	./cdest/a.c.save
+0	./cdest/c.c.save
+0	./cdest/b.c.save
+4	./cdest
+8	./graded/lab3.m.pberenstein.g.4.9
+8	./graded/lab2.m.pberenstein.g.4.9
+4	./graded/lab1.m.pberenstein.g.4.9
+24	./graded
+0	./x-44blade
+4	./z/y
+4	./z/x
+4	./z/w
+16	./z
+0	./x-4blade75
+4	./grep
+4	./pberensteinHard
+4	./.viminfo
+0	./testfile
+4	./good
+4	./small
+4	./.lesshst
+4	./.bashrc
+0	./c_800erg98
+4	./lab3/lab3.m.pberenstein.save
+0	./lab3/good
+4	./lab3/~decoded
+4	./lab3/lab3.m.pberenstein.save.1
+4	./lab3/lab3.m.pberenstein
+4	./lab3/error
+24	./lab3
+4	./controlChars
+4	./echo
+4	./lab4/lab4.m.pberenstein
+4	./lab4/lab4.m.pberenstein.save.1
+4	./lab4/lab4.m.pberenstein.save
+4	./lab4/lab4.m.pberenstein.save.2
+20	./lab4
+4	./.ssh/known_hosts
+8	./.ssh
+4	./file1
+4	./decoded
+4	./allTeedOff
+8	./lab5.1
+4	./y
+0	./pberensteinSoft
+4	./d11/d22/hard
+8	./d11/d22
+12	./d11
+4	./encoded
+8	./.bash_history
+8	./.dircolors
+20	./lab5
+4	./lab1/lab1.m.pberenstein
+8	./lab1
+4	./turnin/lab2.m.pberenstein
+4	./turnin/controlChars
+4	./turnin/lab4.m.pberenstein
+4	./turnin/lab1.m.pberenstein
+4	./turnin/lab3.m.pberenstein
+4	./turnin/me
+28	./turnin
+0	./csource/b.cad
+0	./csource/a.txt
+0	./csource/b.c
+0	./csource/a.c
+0	./csource/c.c
+4	./csource
+4	./x
+4	./.profile
+4	./first
+4	./lab2/lab2.m.pberenstein
+8	./lab2
+4	./.k5login
+4	./testdir
+4	./lab.template
+4	./w
+0	./ls
+0	./c_8erg98
+4	./me
+4	./error
+296	.
+
+pberenstein@cs130:~$ du -s
+300	.
+
+pberenstein@cs130:~$ du -k
+4	./cdest
+24	./graded
+16	./z
+24	./lab3
+20	./lab4
+8	./.ssh
+8	./d11/d22
+12	./d11
+8	./lab1
+28	./turnin
+4	./csource
+8	./lab2
+4	./testdir
+300	.
+
+pberenstein@cs130:~$ du -ak
+0	./cdest/a.c.save
+0	./cdest/c.c.save
+0	./cdest/b.c.save
+4	./cdest
+8	./graded/lab3.m.pberenstein.g.4.9
+8	./graded/lab2.m.pberenstein.g.4.9
+4	./graded/lab1.m.pberenstein.g.4.9
+24	./graded
+0	./x-44blade
+4	./z/y
+4	./z/x
+4	./z/w
+16	./z
+0	./x-4blade75
+4	./grep
+4	./pberensteinHard
+4	./.viminfo
+0	./testfile
+4	./good
+4	./small
+4	./.lesshst
+4	./.bashrc
+0	./c_800erg98
+4	./lab3/lab3.m.pberenstein.save
+0	./lab3/good
+4	./lab3/~decoded
+4	./lab3/lab3.m.pberenstein.save.1
+4	./lab3/lab3.m.pberenstein
+4	./lab3/error
+24	./lab3
+4	./controlChars
+4	./echo
+4	./lab4/lab4.m.pberenstein
+4	./lab4/lab4.m.pberenstein.save.1
+4	./lab4/lab4.m.pberenstein.save
+4	./lab4/lab4.m.pberenstein.save.2
+20	./lab4
+4	./.ssh/known_hosts
+8	./.ssh
+4	./file1
+4	./decoded
+4	./allTeedOff
+8	./lab5.1
+4	./y
+0	./pberensteinSoft
+4	./d11/d22/hard
+8	./d11/d22
+12	./d11
+4	./encoded
+8	./.bash_history
+8	./.dircolors
+24	./lab5
+4	./lab1/lab1.m.pberenstein
+8	./lab1
+4	./turnin/lab2.m.pberenstein
+4	./turnin/controlChars
+4	./turnin/lab4.m.pberenstein
+4	./turnin/lab1.m.pberenstein
+4	./turnin/lab3.m.pberenstein
+4	./turnin/me
+28	./turnin
+0	./csource/b.cad
+0	./csource/a.txt
+0	./csource/b.c
+0	./csource/a.c
+0	./csource/c.c
+4	./csource
+4	./x
+4	./.profile
+4	./first
+4	./lab2/lab2.m.pberenstein
+8	./lab2
+4	./.k5login
+4	./testdir
+4	./lab.template
+4	./w
+0	./ls
+0	./c_8erg98
+4	./me
+4	./error
+300	.
+
+pberenstein@cs130:~$ du -sk
+300	.
+
+pberenstein@cs130:~$ df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/sda1               330215    229245     83921  74% /
+tmpfs                  1557568         0   1557568   0% /lib/init/rw
+udev                   1553128       148   1552980   1% /dev
+tmpfs                  1557568         0   1557568   0% /dev/shm
+/dev/sda9              6180608   1136180   4730472  20% /home
+/dev/sda8               376807     10611    346740   3% /tmp
+/dev/sda5              5865120    799024   4768164  15% /usr
+/dev/sda6              2811008    457400   2210812  18% /var
+
+pberenstein@cs130:~$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/sda1             323M  224M   82M  74% /
+tmpfs                 1.5G     0  1.5G   0% /lib/init/rw
+udev                  1.5G  148K  1.5G   1% /dev
+tmpfs                 1.5G     0  1.5G   0% /dev/shm
+/dev/sda9             5.9G  1.1G  4.6G  20% /home
+/dev/sda8             368M   11M  339M   3% /tmp
+/dev/sda5             5.6G  781M  4.6G  15% /usr
+/dev/sda6             2.7G  447M  2.2G  18% /var
+
+pberenstein@cs130:~$ df -i
+Filesystem            Inodes   IUsed   IFree IUse% Mounted on
+/dev/sda1              85344    7837   77507   10% /
+tmpfs                 218671       5  218666    1% /lib/init/rw
+udev                  216450     596  215854    1% /dev
+tmpfs                 218671       1  218670    1% /dev/shm
+/dev/sda9             392448   46963  345485   12% /home
+/dev/sda8              97536     126   97410    1% /tmp
+/dev/sda5             372416   38444  333972   11% /usr
+/dev/sda6             178816    2837  175979    2% /var
+
+pberenstein@cs130:~$ df -ih
+Filesystem            Inodes   IUsed   IFree IUse% Mounted on
+/dev/sda1                84K    7.7K     76K   10% /
+tmpfs                   214K       5    214K    1% /lib/init/rw
+udev                    212K     596    211K    1% /dev
+tmpfs                   214K       1    214K    1% /dev/shm
+/dev/sda9               384K     46K    338K   12% /home
+/dev/sda8                96K     126     96K    1% /tmp
+/dev/sda5               364K     38K    327K   11% /usr
+/dev/sda6               175K    2.8K    172K    2% /var
+
+#DESCRIBE WHAT EACH ONE DOES
+
+
+
+
+
+############ PROBLEM 5 #########################
+
+pberenstein@cs130:~$ cat mychanges.sed
+s/January/Janvier/g
+s/February/Fevrier/g
+s/March/Mars/g
+s/May/Mai/g
+s/April/Aout/g
+s/September/Septembre/g
+s/October/Octobre/g
+s/November/Novembre/g
+s/December/Decembre/g
+s/June/Juin/g
+s/July/Juillet/g
+s/Mo/Lu/g
+s/Tu/Ma/g
+s/We/Me/g
+s/Th/Je/g
+s/Fr/Ve/g
+s/Sa/Sa/g
+s/Su/Di/g
+
+pberenstein@cs130:~$ cal 2016[K5 | sed -f mychanges.sed
+                             2015
+
+      Janvier               Fevrier               Mars
+Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa
+             1  2  3   1  2  3  4  5  6  7   1  2  3  4  5  6  7
+ 4  5  6  7  8  9 10   8  9 10 11 12 13 14   8  9 10 11 12 13 14
+11 12 13 14 15 16 17  15 16 17 18 19 20 21  15 16 17 18 19 20 21
+18 19 20 21 22 23 24  22 23 24 25 26 27 28  22 23 24 25 26 27 28
+25 26 27 28 29 30 31                        29 30 31
+                                            
+       Avril                  Mai                   Juin
+Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa
+          1  2  3  4                  1  2      1  2  3  4  5  6
+ 5  6  7  8  9 10 11   3  4  5  6  7  8  9   7  8  9 10 11 12 13
+12 13 14 15 16 17 18  10 11 12 13 14 15 16  14 15 16 17 18 19 20
+19 20 21 22 23 24 25  17 18 19 20 21 22 23  21 22 23 24 25 26 27
+26 27 28 29 30        24 25 26 27 28 29 30  28 29 30
+                      31                    
+        Juillet                 Aout              Septembre
+Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa
+          1  2  3  4                     1         1  2  3  4  5
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   6  7  8  9 10 11 12
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  13 14 15 16 17 18 19
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  20 21 22 23 24 25 26
+26 27 28 29 30 31     23 24 25 26 27 28 29  27 28 29 30
+                      30 31                 
+      Octobre               Novembre              Decembre
+Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa  Di Lu Ma Me Je Ve Sa
+             1  2  3   1  2  3  4  5  6  7         1  2  3  4  5
+ 4  5  6  7  8  9 10   8  9 10 11 12 13 14   6  7  8  9 10 11 12
+11 12 13 14 15 16 17  15 16 17 18 19 20 21  13 14 15 16 17 18 19
+18 19 20 21 22 23 24  22 23 24 25 26 27 28  20 21 22 23 24 25 26
+25 26 27 28 29 30 31  29 30                 27 28 29 30 31
+
+
+
+
+
+############# PROBLEM 6 ########################
+
+pberenstein@cs130:~$ sort -k1 names
+Anna Pevzner 53
+Catherine Lang 90
+Danielle Berenstein 14
+Donald Trump 3
+Joan Doe 50
+John Doe 43
+Johnny Walker 70
+Michael Berenstein 57
+Polina Berenstein 23
+Yolanda Cruz 69
+pberenstein@cs130:~$ sort -k2 names
+Danielle Berenstein 14
+Polina Berenstein 23
+Michael Berenstein 57
+Yolanda Cruz 69
+John Doe 43
+Joan Doe 50
+Catherine Lang 90
+Anna Pevzner 53
+Donald Trump 3
+Johnny Walker 70
+
+pberenstein@cs130:~$ spor[K[K[Kort -nk3 names
+Donald Trump 3
+Danielle Berenstein 14
+Polina Berenstein 23
+John Doe 43
+Joan Doe 50
+Anna Pevzner 53
+Michael Berenstein 57
+Yolanda Cruz 69
+Johnny Walker 70
+Catherine Lang 90
+
+pberenstein@cs130:~$ sort -nk3 names[1@r
+Catherine Lang 90
+Johnny Walker 70
+Yolanda Cruz 69
+Michael Berenstein 57
+Anna Pevzner 53
+Joan Doe 50
+John Doe 43
+Polina Berenstein 23
+Danielle Berenstein 14
+Donald Trump 3
+
+
+
+
+
+
+################## PROBLEM 7 ############################
+
+pberenstein@cs130:~$ diff names names2
+5,6c5,6
+< John Doe 43
+< Joan Doe 50
+---
+> John Doe 23
+> John Doe 50
+
+pberenstein@cs130:~$ diff names names2
+5,6c5,6
+< John Doe 43
+< Joan Doe 50
+---
+> John Doe 23
+> John Doe 50
+8c8
+< Catherine Lang 90
+---
+> Catherine Lang 91
+
+
+
+
+
+
+############## PROBLEM 8 ###########################
+
+pberenstein@cs130:~$ cat listlinks
+find . -type l -ls
+
+
+pberenstein@cs130:~$ listlinks ..
+354998    0 lrwxrwxrwx   1 pberenstein domain^users       31 Apr 11 19:26 ./pberensteinSoft -> /home/students/pberenstein/hexy
+
+
+
+
+
+
+############ PROBLEM 9 ##########################
+
+pberenstein@cs130:~$ cat search
+find $1 -type f -name '*' -exec grep $2 {} \; 2>/dev/null
+
+pberenstein@cs130:~$ search /etc "mountall"
+	pre_mountall
+	post_mountall
+$local_fs	+mountall +mountoverflowtmp +umountfs
+TARGETS = mountkernfs.sh udev mountdevsubfs.sh bootlogd keyboard-setup hostname.sh hwclockfirst.sh checkroot.sh hwclock.sh ifupdown-clean mtab.sh module-init-tools checkfs.sh mountall.sh ifupdown mountall-bootclean.sh mountoverflowtmp networking urandom procps udev-mtab portmap nfs-common mountnfs.sh mountnfs-bootclean.sh kbd console-setup bootmisc.sh stop-bootlogd-single
+mountall.sh: checkfs.sh
+mountall-bootclean.sh: mountall.sh
+mountoverflowtmp: mountall-bootclean.sh
+networking: mountkernfs.sh mountall.sh mountoverflowtmp ifupdown
+urandom: mountall.sh mountoverflowtmp
+procps: bootlogd mountkernfs.sh mountall.sh mountoverflowtmp udev module-init-tools
+udev-mtab: udev mountall.sh mountoverflowtmp
+portmap: networking ifupdown mountall.sh mountoverflowtmp
+mountnfs.sh: mountall.sh mountoverflowtmp networking ifupdown portmap nfs-common
+mountnfs-bootclean.sh: mountall.sh mountoverflowtmp mountnfs.sh
+kbd: mountall.sh mountoverflowtmp mountnfs.sh mountnfs-bootclean.sh
+console-setup: mountall.sh mountoverflowtmp mountnfs.sh mountnfs-bootclean.sh kbd
+bootmisc.sh: mountall.sh mountoverflowtmp mountnfs.sh mountnfs-bootclean.sh udev
+stop-bootlogd-single: mountall.sh mountoverflowtmp udev keyboard-setup console-setup mountnfs.sh mountnfs-bootclean.sh hwclock.sh ifupdown ifupdown-clean networking nfs-common portmap urandom checkroot.sh mountkernfs.sh hostname.sh mountdevsubfs.sh hwclockfirst.sh bootlogd bootmisc.sh mtab.sh kbd mountall-bootclean.sh checkfs.sh module-init-tools procps udev-mtab
+# Provides:          mountall-bootclean
+# Required-Start:    mountall
+# Short-Description: bootclean after mountall.
+	echo "Usage: mountall-bootclean.sh [start|stop]" >&2
+# Provides:          mountall
+	pre_mountall
+	post_mountall
+	echo "Usage: mountall.sh [start|stop]" >&2
+# Required-Start:    mountall-bootclean
+	echo "Usage: mountall-mtab.sh [start|stop]" >&2
+
+
+
+
+
+
+
+############### PROBLEM 10 #####################
+
+
+pberenstein@cs130:~$ cat ~/bin/cal
+#ordinal day of year
+date +%j
+
+#calendar of current month
+/usr/bin/cal
+
+#my statement
+echo "Goodbye World"
+
+pberenstein@cs130:~$ cal
+     April 2016
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 [7m27[27m 28 29 30
+
+pberenstein@cs130:~$ export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:.
+
+pberenstein@cs130:~$ cal
+118
+     April 2016
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 [7m27[27m 28 29 30
+
+Goodbye World
+
+
+
+
+
+
+#################################################################
+#bin
+pberenstein@cs130:~$ search /etc "mount point"
+/etc/network/if-up.d/mountnfs:# Description:       Now that TCP/IP is configured, mount the NFS file
+/etc/network/if-up.d/mountnfs:#                    start the portmapper before mounting (this is needed for
+/etc/network/if-up.d/mountnfs:#                    Also mounts SMB filesystems now, so the name of
+/etc/network/if-up.d/mountnfs:. /lib/init/mount-functions.sh
+/etc/network/if-up.d/mountnfs:	# for mounting NFS file systems. If any NFS partition is found and it
+/etc/network/if-up.d/mountnfs:	# not mounted with the nolock option, we start the portmapper.
+/etc/network/if-up.d/mountnfs:	# applicable) if we use Kerberos and/or NFSv4 mounts.
+/etc/network/if-up.d/mountnfs:	pre_mountall
+/etc/network/if-up.d/mountnfs:		mount -a -t$NETFS
+/etc/network/if-up.d/mountnfs:		mount -a -O _netdev
+/etc/network/if-up.d/mountnfs:	post_mountall
+/etc/network/if-up.d/mountnfs:	    msg="if-up.d/mountnfs[$IFACE]: waiting for interface $i before doing NFS mounts"
+/etc/network/if-up.d/mountnfs:	    mkdir /var/run/network/mountnfs_earlyexit 2> /dev/null
+/etc/network/if-up.d/mountnfs:    if [ -d /var/run/network/mountnfs_earlyexit ]; then
+/etc/network/if-up.d/mountnfs:	rmdir /var/run/network/mountnfs_earlyexit 2>/dev/null
+/etc/network/if-up.d/mountnfs:# Using 'no !=' instead of 'yes =' to make sure async nfs mounting is
+/etc/network/if-up.d/mountnfs:    # Wait until all auto interfaces are up before attemting to mount
+/etc/network/if-up.d/mountnfs:    if mkdir /var/run/network/mountnfs 2>/dev/null ; then
+/etc/network/if-up.d/mountnfs:	msg="if-up.d/mountnfs[$IFACE]: lock /var/run/network/mountnfs exist, not mounting"
+/etc/network/if-up.d/mountnfs:	# Log if /usr/ is mounted
+/etc/network/if-up.d/mountnfs:	[ -x /usr/bin/logger ] && /usr/bin/logger -t "if-up.d/mountnfs[$IFACE]" "$msg"
+/etc/network/if-up.d/mountnfs:	rmdir /var/run/network/mountnfs 2>/dev/null || exit 0
+/etc/network/if-up.d/openssh-server:# Is /usr mounted?
+/etc/hosts.deny:# rpc.mountd (the NFS mount daemon). See portmap(8) and rpc.mountd(8)
+/etc/bash_completion:    ssh-installkeys showmount
+/etc/bash_completion:# completion definition - currently not quite foolproof (e.g. mount and umount
+/etc/cron.daily/apt:# sleep random amount of time to avoid hitting the 
+/etc/cron.daily/standard:	while read mount block used avail perc mp; do
+/etc/cron.daily/standard:        fs=`cat /proc/mounts | grep " ${lfdir%/lost+found} "`
+/etc/exim4/exim4.conf.template:  # from mounting certain kinds of attack on remote sites.
+/etc/exim4/conf.d/acl/30_exim4-config_check_rcpt:  # from mounting certain kinds of attack on remote sites.
+/etc/default/nfs-common:# Do you want to start the gssd daemon? It is required for Kerberos mounts.
+/etc/default/keyboard:# before /usr is mounted.
+/etc/rpc:mountd		100005	mount showmount
+/etc/hosts.allow:# rpc.mountd (the NFS mount daemon). See portmap(8) and rpc.mountd(8)
+/etc/apt/apt.conf.d/00CDMountPoint:  mount "/media/cdrom";
+/etc/mtab:/dev/sda1 / ext3 rw,errors=remount-ro 0 0
+/etc/fstab:# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/etc/fstab:UUID=895092a1-e624-4263-88c9-23680595d711 /               ext3    errors=remount-ro 0       1
+/etc/mime.types:application/davmount+xml			davmount
+/etc/vmware-tools/manifest.txt.shipped:hgfsmounter.version = "8.6.0.6261"
+/etc/vmware-tools/locations:file /usr/lib/vmware-tools/sbin64/vmware-hgfsmounter 1343783426
+/etc/vmware-tools/locations:file /usr/lib/vmware-tools/sbin32/vmware-hgfsmounter 1343783427
+/etc/vmware-tools/locations:file /sbin/mount.vmhgfs 1343783432
+/etc/vmware-tools/locations:remove_file /usr/lib/vmware-tools/sbin32/vmware-hgfsmounter
+/etc/vmware-tools/locations:file /usr/lib/vmware-tools/sbin32/vmware-hgfsmounter
+/etc/vmware-tools/manifest.txt:hgfsmounter.version = "8.6.0.6261"
+/etc/vmware-tools/manifest.txt:hgfsmounter.installed = "TRUE"
+/etc/vmware-tools/installer.sh:vmblockmntpt="/proc/fs/vmblock/mountPoint"
+/etc/vmware-tools/installer.sh:# mounting the file system.
+/etc/vmware-tools/installer.sh:   # Check to see if the file system is already mounted.
+/etc/vmware-tools/installer.sh:       # If it is mounted, do nothing
+/etc/vmware-tools/installer.sh:       # If it's not mounted, mount it
+/etc/vmware-tools/installer.sh:       vmware_exec_selinux "mount -t vmblock none $vmblockmntpt"
+/etc/vmware-tools/installer.sh:    # Check if the file system is mounted and only unmount if so.
+/etc/vmware-tools/installer.sh:       # if it's mounted, then unmount it
+/etc/vmware-tools/installer.sh:       vmware_exec_selinux "umount /tmp/vmblock-fuse"
+/etc/vmware-tools/installer.sh:       # if it's mounted, then unmount it
+/etc/vmware-tools/installer.sh:       vmware_exec_selinux "umount $vmblockmntpt"
+/etc/vmware-tools/installer.sh:# /proc/fs/vmblock/mountPoint, allowing vmblock to unload, but vmware-user
+/etc/insserv.conf:# All local filesystems are mounted (done during boot phase)
+/etc/insserv.conf:$local_fs	+mountall +mountoverflowtmp +umountfs
+/etc/insserv.conf:# All remote filesystems are mounted (note in some cases /usr may
+/etc/insserv.conf:$remote_fs	$local_fs +mountnfs +mountnfs-bootclean +umountnfs +sendsigs
+/etc/debconf.conf:# data from another host, which is mounted over nfs or perhaps the database
+/etc/debconf.conf:# A remote NFS mounted database, read-only. It is optional; if debconf
+/etc/bash_completion.d/quota-tools:            --interactive -n --use-first-dquot -M --try-remount -m \
+/etc/bash_completion.d/quota-tools:            --no-remount -R --exclude-root -F --format -a --all' -- "$cur" ) )
+/etc/bash_completion.d/fuse:have fusermount &&
+/etc/bash_completion.d/fuse:_fusermount()
+/etc/bash_completion.d/fuse:complete -F _fusermount -o filenames fusermount
+/etc/bash_completion.d/mount:# mount(8) completion. This will pull a list of possible mounts out of
+/etc/bash_completion.d/mount:have mount &&
+/etc/bash_completion.d/mount:# and /proc/mounts.
+/etc/bash_completion.d/mount:_mount()
+/etc/bash_completion.d/mount:        for sm in "$(type -P showmount)" {,/usr}/{,s}bin/showmount; do
+/etc/bash_completion.d/mount:        COMPREPLY=( $( compgen -W "$( mount | awk '! /^[ \t]*#/ {if ($3 ~ /\//) print $3}' )" -- "$cur" ) )
+/etc/bash_completion.d/mount:complete -F _mount -o default -o dirnames mount
+/etc/bash_completion.d/mount:# umount(8) completion. This relies on the mount point being the third
+/etc/bash_completion.d/mount:# space-delimited field in the output of mount(8)
+/etc/bash_completion.d/mount:have umount &&
+/etc/bash_completion.d/mount:_umount()
+/etc/bash_completion.d/mount:    if [[ $(uname -s) = Linux && -r /proc/mounts ]]; then
+/etc/bash_completion.d/mount:        # Linux /proc/mounts is properly quoted. This is important when
+/etc/bash_completion.d/mount:        # unmounting usb devices with pretty names.
+/etc/bash_completion.d/mount:        _linux_fstab < /proc/mounts
+/etc/bash_completion.d/mount:        COMPREPLY=( $( compgen -W '$( mount | cut -d" " -f 3 )' -- "$cur" ) )
+/etc/bash_completion.d/mount:complete -F _umount -o dirnames umount
+/etc/bash_completion.d/cfengine:        --no-check-mounts --debug --define --no-edits --enforce-links --file \
+/etc/bash_completion.d/cfengine:        --traverse-links --delete-stale-links --no-mount --no-modules \
+/etc/bash_completion.d/findutils:        -ignore_readdir_race -maxdepth -mindepth -mindepth -mount \
+/etc/bash_completion.d/findutils:       -mindepth -mount -noignore_readdir_race -noleaf -nowarn -regextype \
+/etc/init.d/.depend.boot:TARGETS = mountkernfs.sh udev mountdevsubfs.sh bootlogd keyboard-setup hostname.sh hwclockfirst.sh checkroot.sh hwclock.sh ifupdown-clean mtab.sh module-init-tools checkfs.sh mountall.sh ifupdown mountall-bootclean.sh mountoverflowtmp networking urandom procps udev-mtab portmap nfs-common mountnfs.sh mountnfs-bootclean.sh kbd console-setup bootmisc.sh stop-bootlogd-single
+/etc/init.d/.depend.boot:udev: mountkernfs.sh
+/etc/init.d/.depend.boot:mountdevsubfs.sh: mountkernfs.sh udev
+/etc/init.d/.depend.boot:bootlogd: mountdevsubfs.sh
+/etc/init.d/.depend.boot:keyboard-setup: mountkernfs.sh udev bootlogd
+/etc/init.d/.depend.boot:hwclockfirst.sh: bootlogd mountdevsubfs.sh
+/etc/init.d/.depend.boot:checkroot.sh: mountdevsubfs.sh hostname.sh hwclockfirst.sh bootlogd keyboard-setup
+/etc/init.d/.depend.boot:mountall.sh: checkfs.sh
+/etc/init.d/.depend.boot:mountall-bootclean.sh: mountall.sh
+/etc/init.d/.depend.boot:mountoverflowtmp: mountall-bootclean.sh
+/etc/init.d/.depend.boot:networking: mountkernfs.sh mountall.sh mountoverflowtmp ifupdown
+/etc/init.d/.depend.boot:urandom: mountall.sh mountoverflowtmp
+/etc/init.d/.depend.boot:procps: bootlogd mountkernfs.sh mountall.sh mountoverflowtmp udev module-init-tools
+/etc/init.d/.depend.boot:udev-mtab: udev mountall.sh mountoverflowtmp
+/etc/init.d/.depend.boot:portmap: networking ifupdown mountall.sh mountoverflowtmp
+/etc/init.d/.depend.boot:mountnfs.sh: mountall.sh mountoverflowtmp networking ifupdown portmap nfs-common
+/etc/init.d/.depend.boot:mountnfs-bootclean.sh: mountall.sh mountoverflowtmp mountnfs.sh
+/etc/init.d/.depend.boot:kbd: mountall.sh mountoverflowtmp mountnfs.sh mountnfs-bootclean.sh
+/etc/init.d/.depend.boot:console-setup: mountall.sh mountoverflowtmp mountnfs.sh mountnfs-bootclean.sh kbd
+/etc/init.d/.depend.boot:bootmisc.sh: mountall.sh mountoverflowtmp mountnfs.sh mountnfs-bootclean.sh udev
+/etc/init.d/.depend.boot:stop-bootlogd-single: mountall.sh mountoverflowtmp udev keyboard-setup console-setup mountnfs.sh mountnfs-bootclean.sh hwclock.sh ifupdown ifupdown-clean networking nfs-common portmap urandom checkroot.sh mountkernfs.sh hostname.sh mountdevsubfs.sh hwclockfirst.sh bootlogd bootmisc.sh mtab.sh kbd mountall-bootclean.sh checkfs.sh module-init-tools procps udev-mtab
+/etc/init.d/sendsigs:# Required-Stop:     umountnfs
+/etc/init.d/mountnfs-bootclean.sh:# Provides:          mountnfs-bootclean
+/etc/init.d/mountnfs-bootclean.sh:# Required-Start:    $local_fs mountnfs
+/etc/init.d/mountnfs-bootclean.sh:# Short-Description: bootclean after mountnfs.
+/etc/init.d/mountnfs-bootclean.sh:#                    network filesystems have been mounted.
+/etc/init.d/mountnfs-bootclean.sh:	echo "Usage: mountnfs-bootclean.sh [start|stop]" >&2
+/etc/init.d/mountnfs.sh:# Provides:          mountnfs
+/etc/init.d/mountnfs.sh:# Short-Description: Wait for network file systems to be mounted
+/etc/init.d/mountnfs.sh:# Description:       Network file systems are mounted by
+/etc/init.d/mountnfs.sh:#                    /etc/network/if-up.d/mountnfs in the background
+/etc/init.d/mountnfs.sh:#                    for them to be mounted before carrying on.
+/etc/init.d/mountnfs.sh:do_wait_async_mount() {
+/etc/init.d/mountnfs.sh:	# for mounting NFS file systems. If any NFS partition is found
+/etc/init.d/mountnfs.sh:	for mountpt in $waitnfs; do
+/etc/init.d/mountnfs.sh:		log_action_begin_msg "Waiting for $mountpt"
+/etc/init.d/mountnfs.sh:		while ! mountpoint -q $mountpt; do
+/etc/init.d/mountnfs.sh:        # mounting is the default even without a value in
+/etc/init.d/mountnfs.sh:                do_wait_async_mount
+/etc/init.d/mountnfs.sh:                FROMINITD=yes /etc/network/if-up.d/mountnfs
+/etc/init.d/nfs-common:#                    support functions for NFS mounts.
+/etc/init.d/nfs-common:# is partially adapted from the mountnfs.sh script in the sysvinit package.
+/etc/init.d/nfs-common:# file. This does not mean that there are NFSv4 or other mounts active (or
+/etc/init.d/nfs-common:do_mount() {
+/etc/init.d/nfs-common:    if ! mountpoint -q "$2"
+/etc/init.d/nfs-common:	mount -t "$1" "$1" "$2"
+/etc/init.d/nfs-common:do_umount() {
+/etc/init.d/nfs-common:    if mountpoint -q "$1"
+/etc/init.d/nfs-common:	umount "$1"
+/etc/init.d/nfs-common:	    if do_mount rpc_pipefs $PIPEFS_MOUNTPOINT
+/etc/init.d/nfs-common:		    # mysteriously on the first mount
+/etc/init.d/nfs-common:	do_umount $PIPEFS_MOUNTPOINT 2>/dev/null || true
+/etc/init.d/networking:# Required-Start:    mountkernfs $local_fs
+/etc/init.d/networking:    [ -e /proc/mounts ] || return 0
+/etc/init.d/networking:	log_warning_msg "not deconfiguring network interfaces: iSCSI root is mounted."
+/etc/init.d/networking:    exec 9<&0 < /proc/mounts
+/etc/init.d/networking:	    log_warning_msg "not deconfiguring network interfaces: network devices still mounted."
+/etc/init.d/networking:	    log_warning_msg "not deconfiguring network interfaces: network file systems still mounted."
+/etc/init.d/networking:	    log_warning_msg "not deconfiguring network interfaces: network swap still mounted."
+/etc/init.d/mountkernfs.sh:# Provides:          mountkernfs
+/etc/init.d/mountkernfs.sh:. /lib/init/mount-functions.sh
+/etc/init.d/mountkernfs.sh:	# and remounted.
+/etc/init.d/mountkernfs.sh:	domount tmpfs "" /lib/init/rw tmpfs -omode=0755,nosuid$RW_OPT
+/etc/init.d/mountkernfs.sh:	domount proc "" /proc proc -onodev,noexec,nosuid
+/etc/init.d/mountkernfs.sh:	# Only mount sysfs if it is supported (kernel >= 2.6)
+/etc/init.d/mountkernfs.sh:		domount sysfs "" /sys sysfs -onodev,noexec,nosuid
+/etc/init.d/mountkernfs.sh:		domount tmpfs "" /var/run varrun -omode=0755,nosuid$RUN_OPT
+/etc/init.d/mountkernfs.sh:		domount tmpfs "" /var/lock varlock -omode=1777,nodev,noexec,nosuid$LOCK_OPT
+/etc/init.d/mountkernfs.sh:	echo "Warning: mountkernfs should be called with the 'start' argument." >&2
+/etc/init.d/mountkernfs.sh:	echo "Usage: mountkernfs [start|stop]" >&2
+/etc/init.d/bootlogd:# Required-Start:    mountdevsubfs
+/etc/init.d/mountall-bootclean.sh:# Provides:          mountall-bootclean
+/etc/init.d/mountall-bootclean.sh:# Required-Start:    mountall
+/etc/init.d/mountall-bootclean.sh:# Short-Description: bootclean after mountall.
+/etc/init.d/mountall-bootclean.sh:#                    all local filesystems have been mounted.
+/etc/init.d/mountall-bootclean.sh:	echo "Usage: mountall-bootclean.sh [start|stop]" >&2
+/etc/init.d/.depend.stop:TARGETS = lwsmd urandom mpt-statusd atd exim4 lpd sendsigs rsyslog umountnfs.sh portmap nfs-common hwclock.sh networking ifupdown vmware-tools umountfs umountroot halt reboot
+/etc/init.d/.depend.stop:umountnfs.sh: mpt-statusd rsyslog atd exim4 sendsigs
+/etc/init.d/.depend.stop:portmap: umountnfs.sh
+/etc/init.d/.depend.stop:nfs-common: umountnfs.sh
+/etc/init.d/.depend.stop:networking: exim4 umountnfs.sh portmap
+/etc/init.d/.depend.stop:ifupdown: exim4 networking umountnfs.sh portmap
+/etc/init.d/.depend.stop:umountfs: mpt-statusd ifupdown vmware-tools atd exim4 urandom hwclock.sh networking umountnfs.sh portmap
+/etc/init.d/.depend.stop:umountroot: umountfs
+/etc/init.d/.depend.stop:halt: umountroot
+/etc/init.d/.depend.stop:reboot: umountroot
+/etc/init.d/udev:# Required-Start:    mountkernfs 
+/etc/init.d/udev:# we need to unmount /dev/pts/ and remount it later over the tmpfs
+/etc/init.d/udev:unmount_devpts() {
+/etc/init.d/udev:  if mountpoint -q /dev/pts/; then
+/etc/init.d/udev:    umount -n -l /dev/pts/
+/etc/init.d/udev:  if mountpoint -q /dev/shm/; then
+/etc/init.d/udev:    umount -n -l /dev/shm/
+/etc/init.d/udev:# mount a tmpfs over /dev, if somebody did not already do it
+/etc/init.d/udev:mount_tmpfs() {
+/etc/init.d/udev:  if grep -E -q "^[^[:space:]]+ /dev (dev)?tmpfs" /proc/mounts; then
+/etc/init.d/udev:    mount -n -o remount,${dev_mount_options} -t tmpfs tmpfs /dev
+/etc/init.d/udev:  if ! mount -n -o $dev_mount_options -t tmpfs tmpfs /dev; then
+/etc/init.d/udev:  log_failure_msg "udev requires a mounted procfs, not started."
+/etc/init.d/udev:  log_failure_msg "udev requires a mounted sysfs, not started."
+/etc/init.d/udev:dev_mount_options='mode=0755'
+/etc/init.d/udev:  dev_mount_options="size=${tmpfs_size},${dev_mount_options}"
+/etc/init.d/udev:	if mountpoint -q $udev_root/; then
+/etc/init.d/udev:    mount -n -o $dev_mount_options -t tmpfs tmpfs $udev_root
+/etc/init.d/udev:    log_action_begin_msg "Unmounting $udev_root"
+/etc/init.d/udev:    # unmounting with -l should never fail
+/etc/init.d/udev:    if umount -n -l $udev_root; then
+/etc/init.d/udev:# new /dev has been mounted and udevadm trigger has been run there will be
+/etc/init.d/udev:	if mountpoint -q $udev_root/; then
+/etc/init.d/udev:	unmount_devpts
+/etc/init.d/udev:	mount_tmpfs
+/etc/init.d/udev:	[ -d /proc/1 ] || mount -n /proc
+/etc/init.d/mountall.sh:# Provides:          mountall
+/etc/init.d/mountall.sh:. /lib/init/mount-functions.sh
+/etc/init.d/mountall.sh:	mount_all_local() {
+/etc/init.d/mountall.sh:	    mount -a -t nonfs,nfs4,smbfs,cifs,ncp,ncpfs,coda,ocfs2,gfs,gfs2 \
+/etc/init.d/mountall.sh:	pre_mountall
+/etc/init.d/mountall.sh:		mount_all_local
+/etc/init.d/mountall.sh:		log_daemon_msg "Will now mount local filesystems"
+/etc/init.d/mountall.sh:		mount_all_local
+/etc/init.d/mountall.sh:	post_mountall
+/etc/init.d/mountall.sh:	# We might have mounted something over /dev, see if
+/etc/init.d/mountall.sh:	# a file on a now mounted filesystem.
+/etc/init.d/mountall.sh:	echo "Usage: mountall.sh [start|stop]" >&2
+/etc/init.d/udev-mtab:# copy the rules generated before / was mounted read-write
+/etc/init.d/udev-mtab:# if it's not, it's probably a symlink to /proc/mounts
+/etc/init.d/udev-mtab:if mountpoint -q $udev_root; then
+/etc/init.d/udev-mtab:    mtabline="$(grep -E --no-messages "^[^ ]+ +$udev_root +(dev)?tmpfs +" /proc/mounts || true)"
+/etc/init.d/vmware-tools:vmblockmntpt="/proc/fs/vmblock/mountPoint"
+/etc/init.d/vmware-tools:# mounting the file system.
+/etc/init.d/vmware-tools:   # Check to see if the file system is already mounted.
+/etc/init.d/vmware-tools:       # If it is mounted, do nothing
+/etc/init.d/vmware-tools:       # If it's not mounted, mount it
+/etc/init.d/vmware-tools:       vmware_exec_selinux "mount -t vmblock none $vmblockmntpt"
+/etc/init.d/vmware-tools:    # Check if the file system is mounted and only unmount if so.
+/etc/init.d/vmware-tools:       # if it's mounted, then unmount it
+/etc/init.d/vmware-tools:       vmware_exec_selinux "umount /tmp/vmblock-fuse"
+/etc/init.d/vmware-tools:       # if it's mounted, then unmount it
+/etc/init.d/vmware-tools:       vmware_exec_selinux "umount $vmblockmntpt"
+/etc/init.d/vmware-tools:# /proc/fs/vmblock/mountPoint, allowing vmblock to unload, but vmware-user
+/etc/init.d/vmware-tools:# unmount it
+/etc/init.d/vmware-tools:# Identify whether there's a mount mounted on the default hgfs mountpoint
+/etc/init.d/vmware-tools:is_vmhgfs_mounted() {
+/etc/init.d/vmware-tools:vmware_mount_vmhgfs() {
+/etc/init.d/vmware-tools:  if [ "`is_vmhgfs_mounted`" = "no" ]; then
+/etc/init.d/vmware-tools:    vmware_exec_selinux "mount -t vmhgfs .host:/ $vmhgfs_mnt"
+/etc/init.d/vmware-tools:# Start the guest filesystem driver and mount it
+/etc/init.d/vmware-tools:# Unmount all hgfs filesystems left mounted
+/etc/init.d/vmware-tools:vmware_unmount_vmhgfs() {
+/etc/init.d/vmware-tools:  if [ "`is_vmhgfs_mounted`" = "yes" ]; then
+/etc/init.d/vmware-tools:    vmware_exec_selinux "umount $vmhgfs_mnt"
+/etc/init.d/vmware-tools:               vmware_exec 'Mounting HGFS shares:' vmware_mount_vmhgfs
+/etc/init.d/vmware-tools:	    # Ignore the exitcode. The mount may fail if HGFS is disabled
+/etc/init.d/vmware-tools:            vmware_exec 'Unmounting HGFS shares:' vmware_unmount_vmhgfs
+/etc/init.d/umountfs:# Provides:          umountfs
+/etc/init.d/umountfs:# Required-Stop:     umountroot
+/etc/init.d/umountfs:# Short-Description: Turn off swap and unmount all local file systems.
+/etc/init.d/umountfs:	exec 9<&0 </proc/mounts
+/etc/init.d/umountfs:	PROTECTED_MOUNTS="$(sed -n '0,/^\/[^ ]* \/ /p' /proc/mounts)"
+/etc/init.d/umountfs:	# Make sure tmpfs file systems are umounted before turning off
+/etc/init.d/umountfs:			log_action_begin_msg "Unmounting temporary filesystems"
+/etc/init.d/umountfs:			fstab-decode umount $TMPFS_MTPTS
+/etc/init.d/umountfs:			log_daemon_msg "Will now unmount temporary filesystems"
+/etc/init.d/umountfs:			fstab-decode umount -v $TMPFS_MTPTS
+/etc/init.d/umountfs:	# Unmount local filesystems
+/etc/init.d/umountfs:		# Do not use -f umount option for WEAK_MTPTS
+/etc/init.d/umountfs:			log_action_begin_msg "Unmounting weak filesystems"
+/etc/init.d/umountfs:			fstab-decode umount -r -d $WEAK_MTPTS
+/etc/init.d/umountfs:			log_daemon_msg "Will now unmount weak filesystems"
+/etc/init.d/umountfs:			fstab-decode umount -v -r -d $WEAK_MTPTS
+/etc/init.d/umountfs:			log_action_begin_msg "Unmounting local filesystems"
+/etc/init.d/umountfs:			fstab-decode umount -f -r -d $REG_MTPTS
+/etc/init.d/umountfs:			log_daemon_msg "Will now unmount local filesystems"
+/etc/init.d/umountfs:			fstab-decode umount -f -v -r -d $REG_MTPTS
+/etc/init.d/rsyslog:# Required-Stop:     umountnfs $time
+/etc/init.d/rsyslog:# PATH should only include /usr/* if it runs after the mountnfs.sh script
+/etc/init.d/keyboard-setup:# Required-Start:    mountkernfs
+/etc/init.d/mountoverflowtmp:# Provides:          mountoverflowtmp
+/etc/init.d/mountoverflowtmp:# Required-Start:    mountall-bootclean
+/etc/init.d/mountoverflowtmp:# Required-Stop:     umountfs
+/etc/init.d/mountoverflowtmp:# Short-Description: mount emergency /tmp.
+/etc/init.d/mountoverflowtmp:defs=/etc/default/mountoverflowtmp
+/etc/init.d/mountoverflowtmp:		mount -t tmpfs -o size=1048576,mode=1777 overflow /tmp
+/etc/init.d/mountoverflowtmp:	if LC_ALL=C mount | \
+/etc/init.d/mountoverflowtmp:		log_action_begin_msg "Unmounting any overflow tmpfs from /tmp"
+/etc/init.d/mountoverflowtmp:		umount overflow
+/etc/init.d/mountoverflowtmp:	echo "Usage: mountoverflowtmp [start|stop]" >&2
+/etc/init.d/hwclockfirst.sh:# Required-Start:    mountdevsubfs
+/etc/init.d/umountnfs.sh:# Provides:          umountnfs
+/etc/init.d/umountnfs.sh:# Required-Stop:     umountfs
+/etc/init.d/umountnfs.sh:# Short-Description: Unmount all network filesystems except the root fs.
+/etc/init.d/umountnfs.sh:# Description:       Also unmounts all virtual filesystems (proc,
+/etc/init.d/umountnfs.sh:#                    devpts, usbfs, sysfs) that are not mounted at the
+/etc/init.d/umountnfs.sh:	# Write a reboot record to /var/log/wtmp before unmounting
+/etc/init.d/umountnfs.sh:	# Make list of points to unmount in reverse order of their creation
+/etc/init.d/umountnfs.sh:		[ "$VERBOSE" = no ] || log_action_begin_msg "Unmounting remote and non-toplevel virtual filesystems"
+/etc/init.d/umountnfs.sh:		fstab-decode umount $FLAGS $DIRS
+/etc/init.d/umountnfs.sh:	echo "Usage: umountnfs.sh [start|stop]" >&2
+/etc/init.d/procps:# Required-Start:    mountkernfs $local_fs
+/etc/init.d/checkroot.sh:# Required-Start:    mountdevsubfs hostname
+/etc/init.d/checkroot.sh:. /lib/init/mount-functions.sh
+/etc/init.d/checkroot.sh:		ddev="$(mountpoint -qx $rootdev)"
+/etc/init.d/checkroot.sh:		rdev="$(mountpoint -d /)"
+/etc/init.d/checkroot.sh:			if [ "$(mountpoint -qx /dev/root)" = "4:0" ]
+/etc/init.d/checkroot.sh:		# mount -n -o remount,ro / would be the correct syntax but
+/etc/init.d/checkroot.sh:		# mount can get confused when there is a "bind" mount defined
+/etc/init.d/checkroot.sh:		# in fstab that bind-mounts "/" somewhere else.
+/etc/init.d/checkroot.sh:		# So we use mount -n -o remount,ro $rootdev / but that can
+/etc/init.d/checkroot.sh:		# to a bug in sys_mount().
+/etc/init.d/checkroot.sh:			! mount    -n -o remount,ro              $rootdev /              \
+/etc/init.d/checkroot.sh:			&& ! mount -n -o remount,ro -t dummytype $rootdev /  2>/dev/null \
+/etc/init.d/checkroot.sh:			&& ! mount -n -o remount,ro                       /  2>/dev/null
+/etc/init.d/checkroot.sh:			log_failure_msg "Cannot check root file system because it is not mounted read-only."
+/etc/init.d/checkroot.sh:root filesystem mounted in read-only mode."
+/etc/init.d/checkroot.sh:		log_warning_msg "The root filesystem is currently mounted in read-only mode. 
+/etc/init.d/checkroot.sh:	# Remount root to final mode (rw or ro).
+/etc/init.d/checkroot.sh:	# See the comments above at the previous "mount -o remount"
+/etc/init.d/checkroot.sh:	if ! mount -n -o remount,$rootopts,$rootmode $fstabroot / 2>/dev/null
+/etc/init.d/checkroot.sh:		mount -n -o remount,$rootopts,$rootmode /
+/etc/init.d/checkroot.sh:			mount -f -o $rootopts -t $roottype $fstabroot /
+/etc/init.d/umountroot:# Provides:          umountroot
+/etc/init.d/umountroot:	# targets for system mountpoints.  We've just unmounted all other
+/etc/init.d/umountroot:	# filesystems, so either they are mounted now (in which case the
+/etc/init.d/umountroot:	# mount point exists) or we can make the mountpoint.
+/etc/init.d/umountroot:	#     mount -n -o remount,ro /
+/etc/init.d/umountroot:	# will act on a bind mount of / if there is one.
+/etc/init.d/umountroot:	mount    $MOUNT_FORCE_OPT -n -o remount,ro -t dummytype dummydev / 2>/dev/null \
+/etc/init.d/umountroot:	|| mount $MOUNT_FORCE_OPT -n -o remount,ro              dummydev / 2>/dev/null \
+/etc/init.d/umountroot:	|| mount $MOUNT_FORCE_OPT -n -o remount,ro                       /
+/etc/init.d/skeleton:# PATH should only include /usr/* if it runs after the mountnfs.sh script
+/etc/init.d/mtab.sh:# Description:       Update the mount program's mtab file after
+/etc/init.d/mtab.sh:#                    all local filesystems have been mounted.
+/etc/init.d/mtab.sh:# the fact that virtual filesystems were mounted early on, before mtab
+/etc/init.d/mtab.sh:. /lib/init/mount-functions.sh
+/etc/init.d/mtab.sh:# $2 - mount point
+/etc/init.d/mtab.sh:# $3 - mount name/device
+/etc/init.d/mtab.sh:# $4 - mount options
+/etc/init.d/mtab.sh:	# Not mounted?
+/etc/init.d/mtab.sh:	if ! mountpoint -q $2 < /dev/null
+/etc/init.d/mtab.sh:		mount -f -t $1 $OPTS $4 $NAME $2 < /dev/null
+/etc/init.d/mtab.sh:	# S02mountkernfs.sh
+/etc/init.d/mtab.sh:	# S04mountdevsubfs
+/etc/init.d/mtab.sh:	# Add everything else in /proc/mounts into /etc/mtab, with
+/etc/init.d/mtab.sh:	exec 9<&0 0</proc/mounts
+/etc/init.d/mtab.sh:	echo "Usage: mountall-mtab.sh [start|stop]" >&2
+/etc/init.d/mountdevsubfs.sh:# Provides:          mountdevsubfs
+/etc/init.d/mountdevsubfs.sh:# Required-Start:    mountkernfs
+/etc/init.d/mountdevsubfs.sh:. /lib/init/mount-functions.sh
+/etc/init.d/mountdevsubfs.sh:	domount tmpfs shmfs /dev/shm tmpfs -onosuid,nodev$SHM_OPT
+/etc/init.d/mountdevsubfs.sh:		domount devpts "" /dev/pts devpts -onoexec,nosuid,gid=$TTYGRP,mode=$TTYMODE
+/etc/init.d/mountdevsubfs.sh:	echo "Warning: mountdevsubfs should be called with the 'start' argument." >&2
+/etc/init.d/mountdevsubfs.sh:	echo "Usage: mountdevsubfs [start|stop]" >&2
+/etc/init.d/bootmisc.sh:# Description:       Some cleanup.  Note, it need to run after mountnfs-bootclean.sh.
+
