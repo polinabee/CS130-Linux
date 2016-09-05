@@ -1,0 +1,72 @@
+# CS130 Script Header, Spring 2016
+
+ProblemStart ()
+{
+if [ -f ~/bin/processStart ]; then source ~/bin/processStart $1; fi
+set -o verbose
+}
+
+ProblemEnd ()
+{
+set +o verbose
+read -p "(press Enter) " input
+if [ -f ~/bin/processEnd ]; then source ~/bin/processEnd $1 $input; fi
+}
+
+# force the script to begin running in HOME directory (~)
+cd ~
+echo
+
+# (don't change anything above this line !)
+#----------------------------------------------------------------------
+
+# replace Jimi's name with your name below, using format:  Last, First
+myName="Berenstein, Polina"
+echo $myName; echo
+
+echo 1111111111111111111111111111111111111111111111111111111111111111111
+ProblemStart 1
+echo -n "My User Name: ";whoami;echo -n "This Computer: ";hostname
+ssh $1 "echo -n 'Remote Computer: ';hostname; w"
+pwd
+
+ProblemEnd 1
+
+
+echo 2222222222222222222222222222222222222222222222222222222222222222222
+ProblemStart 2
+echo -n 'DATE: '; date +%A,\ %B\ %d,\ %G; echo -n 'TIME: '; date +%-l:%m:%S\ %p
+cat $2
+fold -s -w$3 $2
+ProblemEnd 2
+
+
+echo 3333333333333333333333333333333333333333333333333333333333333333333
+ProblemStart 3
+cd ~
+mkdir -p d11/d22/d33
+cd d11/d22
+cp $2 ../easy
+touch d33/xxx d33/yyy d33/zzz
+mv ../easy hard
+tree ../
+rm -r ~/d11/d22/d33
+tree ~/d11
+ProblemEnd 3
+
+
+echo 4444444444444444444444444444444444444444444444444444444444444444444
+ProblemStart 4
+cat -v $4
+od -a $4
+hexdump $4
+ProblemEnd 4
+
+
+echo 5555555555555555555555555555555555555555555555555555555555555555555
+ProblemStart 5
+read -p "Pick three different numbers between 32 and 127" first second third; echo $first $second $third | awk '{printf("%c\n%c\n%c\n",$1,$2,$3)}'
+ascii
+ProblemEnd 5
+
+

@@ -1,0 +1,77 @@
+# CS130 Script Header, Spring 2016
+
+ProblemStart ()
+{
+if [ -f ~/bin/processStart ]; then source ~/bin/processStart $1; fi
+set -o verbose
+}
+
+ProblemEnd ()
+{
+set +o verbose
+read -p "(press Enter) " input
+if [ -f ~/bin/processEnd ]; then source ~/bin/processEnd $1 $input; fi
+}
+
+# force the script to begin running in HOME directory (~)
+cd ~
+echo
+
+# (don't change anything above this line !)
+#----------------------------------------------------------------------
+
+# replace Jimi's name with your name below, using format:  Last, First
+myName="Berenstein, Polina"
+echo $myName; echo
+
+echo 1111111111111111111111111111111111111111111111111111111111111111111
+ProblemStart 1
+cat ~/small ~/big
+cat ~/small ~/big 1>|~/good 2>|~/error
+cat ~/good ~/error
+ls -l ~ ~/nothing 2>/dev/null
+ProblemEnd 1
+
+
+echo 2222222222222222222222222222222222222222222222222222222222222222222
+ProblemStart 2
+tr $1 $2 < ~/small
+tr $1 $2 < ~/small > ~/encoded
+cat ~/encoded
+tr $2 $1 < ~/encoded
+tr $2 $1 < ~/encoded > ~/decoded
+echo CAN BE DIFFERENT
+diff ~/encoded ~/decoded
+ProblemEnd 2
+
+
+echo 3333333333333333333333333333333333333333333333333333333333333333333
+ProblemStart 3
+#print small line by line, sort, and print number of occurances of test
+cat <~/small | xargs -n1 |sort | tee allTeedOff |uniq -c|grep 1;cat ~/allTeedOff
+
+ProblemEnd 3
+
+
+echo 4444444444444444444444444444444444444444444444444444444444444444444
+ProblemStart 4
+read -p "Input list of strings separated by spaces: " string;read -p "enter a pause time in seconds: " pause; rm -f ~/myData;
+for i in $string
+do
+	echo $i
+	date >> ~/myData
+	echo $i >> ~/myData
+	sleep $pause
+done
+echo --------------------------------------------------
+cat ~/myData
+ProblemEnd 4
+
+
+echo 5555555555555555555555555555555555555555555555555555555555555555555
+ProblemStart 5
+cd $3; ls *.c | xargs -I file cp -f file $4/file.save; 
+echo $4; ls $4
+ProblemEnd 5
+
+
