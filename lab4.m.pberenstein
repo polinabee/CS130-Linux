@@ -1,0 +1,86 @@
+# CS130 Script Header, Spring 2016
+
+ProblemStart ()
+{
+if [ -f ~/bin/processStart ]; then source ~/bin/processStart $1; fi
+set -o verbose
+}
+
+ProblemEnd ()
+{
+set +o verbose
+read -p "(press Enter) " input
+if [ -f ~/bin/processEnd ]; then source ~/bin/processEnd $1 $input; fi
+}
+
+# force the script to begin running in HOME directory (~)
+cd ~
+echo
+
+# (don't change anything above this line !)
+#----------------------------------------------------------------------
+
+# replace Jimi's name with your name below, using format:  Last, First
+myName="Berenstein, Polina"
+echo $myName; echo
+
+echo 1111111111111111111111111111111111111111111111111111111111111111111
+ProblemStart 1
+set +C;cal | hexdump | head -3| cat -n > ~/hexy; cat ~/hexy
+set +C;cal | hexdump | head -3| cat -n > ~/hexy; cat ~/hexy
+ln ~/hexy pberensteinHard; ln -s ~/hexy pberensteinSoft
+find . -samefile ~/hexy
+ls -li pberensteinSoft pberensteinHard ~/hexy
+ln ~/hexy /tmp/pberensteinHard; ln -s ~/hexy /tmp/pberensteinSoft
+ProblemEnd 1
+
+echo 2222222222222222222222222222222222222222222222222222222222222222222
+ProblemStart 2
+shopt -s expand_aliases
+alias lmod="ls -lat"
+lmod
+alias fileFilter="ls -a [[:lower:]][-_.][[:digit:]][^0-9]*"
+fileFilter
+
+ProblemEnd 2
+
+
+echo 3333333333333333333333333333333333333333333333333333333333333333333
+ProblemStart 3
+echo Right now, the value of my '$PWD' is $PWD
+echo Try '\echo `ps -ef`' to see more processes
+echo "Suddenly she exclaimed, "'"We'"'"'ll never get out alive !"'
+echo This result is$'\n'on two lines
+
+ProblemEnd 3
+
+
+echo 4444444444444444444444444444444444444444444444444444444444444444444
+ProblemStart 4
+
+touch ~/{,1,2}{1..9}Apr{16,17}
+
+cd ~;ls {,1,2}{1..9}Apr{16,17} | echo $(wc -l) months were just displayed
+
+#Challenge:
+rm {,1,2}{1..9}Apr{16,17}
+touch {1..29}Apr{16,17}
+
+cd ~;ls {1..29}Apr{16,17} | echo $(wc -l) months were just displayed
+
+ProblemEnd 4
+
+
+echo 5555555555555555555555555555555555555555555555555555555555555555555
+ProblemStart 5
+
+foo=$1;midchar=`echo $((0x${foo:1:1}))`; let "middec = 16 * $midchar"
+firstchar=`echo $((0x${foo:0:1}))`; let "firstdec = 16**2 * $firstchar"
+lastchar=`echo $((0x${foo:2:1}))`; let "lastdec = 16**0 * $lastchar"
+let "decvalue = $firstdec + $middec + $lastdec"
+echo $1 hex = $((0x$foo)) decimal
+echo $decvalue
+
+ProblemEnd 5
+
+
